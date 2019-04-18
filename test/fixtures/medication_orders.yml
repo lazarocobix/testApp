@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyText
+  unit: 1
+  dosage: 9.99
+  route: 1
+  order_frequency_id: 1
+  necessity: MyText
+
+two:
+  name: MyText
+  unit: 1
+  dosage: 9.99
+  route: 1
+  order_frequency_id: 1
+  necessity: MyText

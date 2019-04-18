@@ -1,0 +1,20 @@
+<div class="row">
+    <div class="col-12">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">Patients</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% @patients.each do |p|%>
+                    <tr>
+                        <td scope="row">
+                            <%= link_to p.full_name, {:controller => "patient", :action => "show"}, :id => p.id %>
+                        </td>
+                    </tr>
+                <%end %>
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,70 @@
+<div class="row">
+    <div class="col-12">
+
+        <table class="table">
+            <thead class="thead-dark">
+            <tr>
+                <th scope="col" colspan="4">Emergency Transfer Summary (Form 34L-D)</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th scope="row" colspan="4">Transferring Facility</th>
+            </tr>
+            <tr>
+                <td scope="row">
+                    <span>
+                        Name <br>
+                        <%= @facility.name %>    
+
+                </td>
+                <td colspan="3"></td>
+            </tr>
+            <tr>
+                <th scope="row" colspan="4">Patient information</th>
+            </tr>
+            <tr>
+                <td scope="row">
+                    <span>
+                        First name <br>
+                        <%= @patient.first_name %> 
+                    </span>
+                </td>
+                <td>
+                    <span>
+                        Middle Name <br>
+                        <%= @patient.middle_name %>
+                    </span>
+                </td>
+                <td>
+                    <span>
+                        Last name <br>
+                        <%= @patient.last_name %>
+                    </span>
+                </td>
+                <td>
+                    <span>
+                        Medical record <br>
+                        <%= @patient.mr %>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row" colspan="4"> Summary </th>
+            </tr>
+            <tr>
+                <td scope="row" colspan="4">
+                    <span>
+                        This <%=@patient.age%> years old <%=@patient.gender%> was admitted to <%=@facility.name%> on <%=@patient.admission.moment.to_date%> at <%=@patient.admission.moment.strftime("%I:%M:%S %z")%> due to <%=@patient.admission.diagnoses_sentence%>. 
+                        The observed symptoms on admission were <%=@patient.admission.symptoms_sentence%>.
+                        Upon asking about known allergies, the patient disclosed <%=@patient.allergies_sentence%>. Upon asking about chronic conditions, the patient disclosed
+                        <%=@patient.diagnoses_sentence%>. The patient was administered with <%=@patient.medications_sentence%>.
+                        The staff performed <%=@patient.diagnostic_procedures_sentence%>, revealing
+                        <%=@patient.diagnoses_code_sentence%>. Our team proceeded to <%=@patient.treatments_sentence%>.
+                    </span>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
